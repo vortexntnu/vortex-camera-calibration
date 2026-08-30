@@ -1,0 +1,13 @@
+# A plain chessboard. columns/rows count INNER corners -- one less on each axis
+# than the squares you can count on the print, which is the OpenCV convention
+# and the single most common way to get a calibration silently wrong.
+#
+# Prefer an odd x even inner-corner count, as here. A grid that is even on both
+# axes is 180-degree ambiguous, and if the two eyes of a stereo pair resolve
+# that ambiguity differently the correspondence is wrong while every mono
+# number still looks healthy.
+board:
+  kind: checkerboard
+  columns: 9           # inner corners across
+  rows: 6              # inner corners down
+  square_size: 0.025   # metres

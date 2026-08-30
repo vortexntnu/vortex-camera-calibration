@@ -1,0 +1,14 @@
+# The board in recordings/recording-2026-08-22T13-00-20.
+#
+# Confirmed against the images rather than taken on trust: the ArUco pass reads
+# 54 distinct ids, and a charuco board carries one marker per white square, so
+# 54 markers means 108 squares, and 12 x 9 is the layout that detects. The
+# pitch and marker size are the ones printed along the bottom edge of the sheet.
+board:
+  kind: charuco
+  columns: 12          # squares across
+  rows: 9              # squares down
+  square_size: 0.060   # metres
+  marker_size: 0.045   # metres
+  dictionary: DICT_5X5_100
+  legacy_pattern: false

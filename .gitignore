@@ -1,0 +1,38 @@
+__pycache__/
+*.py[cod]
+
+.vscode/
+
+.claude/
+
+.pytest_cache/
+
+.venv/
+venv/
+*.egg-info/
+
+.DS_Store
+
+# Solve outputs. These are written to <dataset>/calibration/ by default, so they
+# only land here when someone points -o at the repo -- but they are derived from
+# images plus a board spec, and regenerating them is one command.
+calibration/
+calibration.yaml
+calibration_opencv.yml
+calibration_report.pdf
+diagnostics_*.png
+rectified_preview.jpg
+rectify_maps.npz
+
+# The detection cache. Megabytes, keyed on image mtimes, so it is stale the
+# moment it leaves the machine that built it.
+detections.pkl
+
+# Which views were excluded. An input to a solve rather than an output, so it is
+# worth keeping deliberately -- commit it with `git add -f` when a curated
+# selection is the thing you want to preserve.
+selection.json
+
+# Board specs are source, not output: they are the thing a calibration is
+# measured against, and losing one makes every result unreproducible.
+!boards/*.yaml
