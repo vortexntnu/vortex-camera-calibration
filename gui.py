@@ -45,9 +45,9 @@ if _plugin_path and (os.sep + "cv2" + os.sep) in _plugin_path:
 from PyQt5 import QtCore, QtGui, QtWidgets  # noqa: E402
 
 from . import detect as detect_mod
-from . import io as io_mod
+from . import fileio as io_mod
 from . import report as report_mod
-from . import select as select_mod
+from . import viewselect as select_mod
 from .calibrate import (CalibrationError, Model, StereoCalibration, calibrate_mono,
                         calibrate_stereo, outliers)
 from .cli import board_from_args, model_from_args, _target_views

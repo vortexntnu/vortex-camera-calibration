@@ -7,7 +7,7 @@ against a rig that is known exactly, by projecting a board through it and
 handing the result back to the solver. If these pass and a real dataset still
 solves badly, the problem is in front of the lens.
 
-    python3 -m calibtool.tests.test_synthetic
+    python3 vortex-camera-calibration/tests/test_synthetic.py
 """
 
 from __future__ import annotations

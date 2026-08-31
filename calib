@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-"""Entry point, runnable from anywhere: `/home/nx/vortex/calibtool/calib run ...`"""
+"""Thin alias for main.py, kept so `./calib ...` in the README still works."""
 import pathlib
+import runpy
 import sys
 
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
-
-from calibtool.cli import main  # noqa: E402
-
-sys.exit(main())
+sys.argv[0] = str(pathlib.Path(__file__).resolve().parent / "main.py")
+runpy.run_path(sys.argv[0], run_name="__main__")

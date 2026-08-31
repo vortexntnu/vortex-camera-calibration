@@ -6,9 +6,9 @@ at every image, see where the error actually is, throw out the frames that
 deserve it, and re-solve in a second.
 
 ```
-./calibtool/calib gui  perception_pipeline/recordings/recording-2026-08-22T13-00-20
-./calibtool/calib run  perception_pipeline/recordings/recording-2026-08-22T13-00-20
-./calibtool/calib auto perception_pipeline/recordings/recording-2026-08-22T13-00-20
+python3 vortex-camera-calibration/main.py gui  perception_pipeline/recordings/recording-2026-08-22T13-00-20
+python3 vortex-camera-calibration/main.py run  perception_pipeline/recordings/recording-2026-08-22T13-00-20
+python3 vortex-camera-calibration/main.py auto perception_pipeline/recordings/recording-2026-08-22T13-00-20
 ```
 
 Needs `opencv-python` (4.7+, for the modern `CharucoDetector`), `numpy`,
@@ -39,7 +39,7 @@ Stereo pairing is by the **digits in the filename**, not sort order:
 ### The board
 
 ```bash
---board calibtool/boards/charuco_12x9_60mm.yaml       # a preset
+--board vortex-camera-calibration/boards/charuco_12x9_60mm.yaml       # a preset
 --board-kind charuco --columns 12 --rows 9 --square 60 --marker 45 \
   --dictionary DICT_5X5_100                            # or spell it out
 --board-kind checkerboard --columns 9 --rows 6 --square 25
@@ -98,7 +98,7 @@ calibration to use.
 ## The inspector
 
 ```
-./calibtool/calib gui perception_pipeline/recordings/recording-2026-08-22T13-00-20
+python3 vortex-camera-calibration/main.py gui perception_pipeline/recordings/recording-2026-08-22T13-00-20
 ```
 
 Left/right panes with the overlay drawn in **scene** coordinates, so zooming in

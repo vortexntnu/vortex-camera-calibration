@@ -13,9 +13,9 @@ import numpy as np
 import yaml
 
 from . import detect as detect_mod
-from . import io as io_mod
+from . import fileio as io_mod
 from . import report as report_mod
-from . import select as select_mod
+from . import viewselect as select_mod
 from .board import ARUCO_DICTS, CHARUCO, CHECKERBOARD, Board
 from .calibrate import CalibrationError, Model, calibrate_mono, calibrate_stereo
 from .dataset import discover
